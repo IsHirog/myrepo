@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('https://fonts.cdnfonts.com/css/minecraft-ten');
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    background-image: 
+        linear-gradient(#111 1px, transparent 1px),
+        linear-gradient(90deg, #111 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-button {
+        display: block;
+    }
+}
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-minecraft {
+    font-family: 'Minecraft', monospace;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.skill-tag {
+    font-family: 'Minecraft', monospace;
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid #cc0000;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: #cc0000;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-card.reverse {
+    flex-direction: column-reverse;
+}
+
+.project-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #333;
+    position: relative;
+}
+
+.project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    transition: opacity 0.3s ease;
+}
+
+.project-image:hover::after {
+    opacity: 0.3;
+}
+
+.project-content {
+    padding: 1rem 0;
+}
+
+.project-details {
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.project-link {
+    color: #cc0000;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+    transform: translateX(5px);
+}
+@media (min-width: 768px) {
+    .project-card {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .project-card.reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .project-image {
+        flex: 1;
+    }
+    
+    .project-content {
+        flex: 1;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    #hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    #hero .flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #hero .flex a {
+        width: 100%;
+        text-align: center;
+    }
+
+    #skills .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #contact .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #skills .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skill-item {
+    border: 1px solid #333;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    border-color: #cc0000;
+    transform: translateY(-5px);
+}
+
+.skill-level {
+    height: 4px;
+    background-color: #333;
+    margin-top: 0.5rem;
+}
+
+.level-bar {
+    height: 100%;
+    background-color: #cc0000;
+}
+#last-repo {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease;
+}
+#last-repo:hover {
+  transform: scale(1.02);
+}

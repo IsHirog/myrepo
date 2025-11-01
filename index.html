@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>PixelCraft Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=VT323&family=Inter:wght@300;400;600&display=swap');
+  </style>
+</head>
+
+<body class="bg-black text-white">
+  <custom-navbar></custom-navbar>
+
+  <main class="container mx-auto px-4">
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center relative z-10">
+      <div class="max-w-2xl">
+        <h1 class="text-5xl md:text-7xl font-serif mb-4">HI, I'M
+          <span class="text-red-600">CHRISTIAN</span></h1>
+        <div class="h-1 w-24 bg-red-600 mb-6"></div>
+        <p class="text-xl font-sans mb-8 opacity-90">
+          Fullstack Developer & Embedded Systems Engineer crafting digital experiences with precision.
+        </p>
+        <div class="flex gap-4">
+          <a href="#projects"
+            class="px-6 py-3 bg-red-600 hover:bg-red-700 transition-colors duration-300 font-mono">VIEW
+            WORK</a>
+          <a href="#contact"
+            class="px-6 py-3 border border-white hover:border-red-600 hover:text-red-600 transition-colors duration-300 font-mono">CONTACT</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects" class="py-20">
+      <h2 class="text-3xl font-serif mb-12">FEATURED WORK</h2>
+      <div class="space-y-24">
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('components/imgs/handse.png')"></div>
+          <div class="project-content">
+            <h3 class="font-minecraft">Hand-se Monitoring System</h3>
+            <p class="text-gray-400">Real-time monitoring system for industrial IoT devices</p>
+            <div class="project-details">
+              <p><span class="text-red-600">ROLE:</span> Fullstack Development</p>
+              <p><span class="text-red-600">TECH:</span> Python 3, C/C++ (Arduino), OpenCV, Hardware IoT</p>
+            </div>
+            <a href="https://github.com/IsHirog/Hand-se" class="project-link">VIEW CASE STUDY →</a>
+          </div>
+        </div>
+
+        <div class="project-card reverse">
+          <div class="project-image" style="background-image: url('components/imgs/RSA.png')"></div>
+          <div class="project-content">
+            <h3 class="font-minecraft">RSA encryption in C</h3>
+            <p class="text-gray-400">A simple implementation of the RSA algorithm in C.</p>
+            <div class="project-details">
+              <p><span class="text-red-600">ROLE:</span> Fullstack Development</p>
+              <p><span class="text-red-600">TECH:</span> C</p>
+            </div>
+            <a href="https://github.com/IsHirog/RSA" class="project-link">VIEW CASE STUDY →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('components/imgs/LLM.png')"></div>
+          <div class="project-content">
+            <h3 class="font-minecraft">Chat de Lógica LLM</h3>
+            <p class="text-gray-400">LLM interface designed for logical analysis and argumentation.</p>
+            <div class="project-details">
+              <p><span class="text-red-600">ROLE:</span> Fullstack Development</p>
+              <p><span class="text-red-600">TECH:</span> Python, Flask, React</p>
+            </div>
+            <a href="https://github.com/IsHirog/ChatDeLogicaLLM" class="project-link">VIEW CASE STUDY →</a>
+          </div>
+        </div>
+
+        <div class="project-card reverse">
+          <div class="project-image" style="background-image: url('components/imgs/EncurtaCu.png')"></div>
+          <div class="project-content">
+            <h3 class="font-minecraft">Encurta.Cu</h3>
+            <p class="text-gray-400">A custom URL shortener service.</p>
+            <div class="project-details">
+              <p><span class="text-red-600">ROLE:</span> Fullstack Development</p>
+              <p><span class="text-red-600">TECH:</span> Java 17+, Spring Boot 3+, MySQL, Thymeleaf, Bootstrap 5</p>
+            </div>
+            <a href="https://github.com/IsHirog/EncurtaCu" class="project-link">VIEW CASE STUDY →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="mb-16">
+      <h2 class="text-3xl font-playfair mb-8">// TECH STACK VISOR</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div class="skill-item">
+          <i data-feather="cpu" class="text-red-600"></i>
+          <p class="font-pixel mt-2">JavaScript</p>
+          <div class="skill-level"><div class="level-bar" style="width: 90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <i data-feather="code" class="text-red-600"></i>
+          <p class="font-pixel mt-2">Python</p>
+          <div class="skill-level"><div class="level-bar" style="width: 85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <i data-feather="hard-drive" class="text-red-600"></i>
+          <p class="font-pixel mt-2">C++</p>
+          <div class="skill-level"><div class="level-bar" style="width: 35%"></div></div>
+        </div>
+        <div class="skill-item">
+          <i data-feather="hard-drive" class="text-red-600"></i>
+          <p class="font-pixel mt-2">C</p>
+          <div class="skill-level"><div class="level-bar" style="width: 87%"></div></div>
+        </div>
+        <div class="skill-item">
+          <i data-feather="github" class="text-red-600"></i>
+          <p class="font-pixel mt-2">GitHub</p>
+          <div class="skill-level"><div class="level-bar" style="width: 70%"></div></div>
+        </div>
+        <div class="skill-item">
+          <i data-feather="coffee" class="text-red-600"></i>
+          <p class="font-pixel mt-2">Java</p>
+          <div class="skill-level"><div class="level-bar" style="width: 50%"></div></div>
+        </div>
+        <div class="skill-item">
+          <i data-feather="wifi" class="text-red-600"></i>
+          <p class="font-pixel mt-2">IoT</p>
+          <div class="skill-level"><div class="level-bar" style="width: 80%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <h2 class="text-3xl font-serif mb-12">// CONTACT</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="mb-8 text-lg">Have a project in mind or want to discuss potential opportunities? Let's connect!</p>
+          <div class="space-y-4">
+            <a href="#" class="flex items-center gap-2 hover:text-red-600 transition-colors duration-300">
+              <i data-feather="mail"></i> chritiangabriel3d@gmail.com
+            </a>
+            <a href="#" class="flex items-center gap-2 hover:text-red-600 transition-colors duration-300">
+              <i data-feather="github"></i> github.com/IsHirog
+            </a>
+            <a href="#" class="flex items-center gap-2 hover:text-red-600 transition-colors duration-300">
+              <i data-feather="linkedin"></i> linkedin.com/in/ChristianGabriel
+            </a>
+          </div>
+        </div>
+
+        <form id="contact-form" class="space-y-6">
+          <input type="text" id="name" name="name" placeholder="Your Name"
+            class="w-full bg-transparent border-b border-gray-700 py-2 focus:border-red-600 outline-none transition-colors duration-300"
+            required>
+          <input type="email" id="email" name="email" placeholder="Email"
+            class="w-full bg-transparent border-b border-gray-700 py-2 focus:border-red-600 outline-none transition-colors duration-300"
+            required>
+          <textarea id="message" name="message" placeholder="Message" rows="4"
+            class="w-full bg-transparent border-b border-gray-700 py-2 focus:border-red-600 outline-none transition-colors duration-300"
+            required></textarea>
+          <button type="submit"
+            class="px-8 py-3 bg-red-600 hover:bg-red-700 transition-colors duration-300 font-mono">SEND MESSAGE</button>
+          <p id="form-status" class="mt-2"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <custom-footer></custom-footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://deepsite.hf.co/deepsite-badge.js"></script>
+</body>
+</html>
