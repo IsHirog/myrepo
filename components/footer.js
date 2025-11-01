@@ -48,7 +48,7 @@ class CustomFooter extends HTMLElement {
 
       <footer>
         <div class="status">
-          <span>VISITORS:</span> <span id="visitor-count">...</span> |
+          <span>REPOSITORIES:</span> <span id="repo-count">...</span> |
           <span>LAST REPO:</span> <a id="repo-link" href="#" target="_blank">CARREGANDO...</a> |
           <span>PORTFOLIO UPDATED:</span> <span id="portfolio-update">...</span>
         </div>
@@ -59,25 +59,14 @@ class CustomFooter extends HTMLElement {
       </footer>
     `;
 
-    // 1️⃣ Contagem de visitantes com autenticação
-    fetch('https://api.counterapi.dev/v2/meu-portfolio/visitor-count-tets/up', {
-      headers: {
-        'Authorization': 'Bearer ut_bUkjITHiVvQjoSQnVln04mHhVghfXjBn1JULhB2m'
-      }
-    })
-    .then(res => res.json())
-    .then(data => {
-      this.shadowRoot.querySelector("#visitor-count").textContent = data.value;
-    })
-    .catch(() => {
-      this.shadowRoot.querySelector("#visitor-count").textContent = "N/A";
-    });
-
-    // 2️⃣ Último repositório atualizado do GitHub
-    fetch("https://api.github.com/users/IsHirog/repos?sort=updated&direction=desc")
+    // 1️⃣ Contagem de repositórios
+    fetch("https://api.github.com/users/IsHirog/repos")
       .then(res => res.json())
       .then(repos => {
-        const repo = repos[0];
+        this.shadowRoot.querySelector("#repo-count").textContent = repos.length || 0;
+
+        // Também atualizar último repositório
+        const repo = repos.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at))[0];
         const repoLink = this.shadowRoot.querySelector("#repo-link");
         if (repo) {
           repoLink.textContent = repo.name;
@@ -88,12 +77,13 @@ class CustomFooter extends HTMLElement {
         }
       })
       .catch(() => {
+        this.shadowRoot.querySelector("#repo-count").textContent = "Erro";
         const repoLink = this.shadowRoot.querySelector("#repo-link");
         repoLink.textContent = "Erro";
         repoLink.href = "#";
       });
 
-    // 3️⃣ Última atualização do repositório do portfólio
+    // 2️⃣ Última atualização do repositório do portfólio
     fetch(`https://api.github.com/repos/IsHirog/myrepo/commits?per_page=1`)
       .then(res => {
         if (!res.ok) throw new Error(res.status);
