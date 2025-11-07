@@ -89,6 +89,10 @@ class CustomNavbar extends HTMLElement {
           a {
             font-size: 0.8rem;
           }
+          /* ADICIONADO: Ajuste o padding no celular para um espaço horizontal mínimo */
+          nav {
+            padding: 1rem 0.5rem;
+          }
         }
 </style>
       <nav>
