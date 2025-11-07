@@ -173,11 +173,14 @@ body {
     padding: 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
+    background-color: #000;
 }
 
 .skill-item:hover {
     border-color: #cc0000;
     transform: translateY(-5px);
+    background-color: #000;
+
 }
 
 .skill-level {
